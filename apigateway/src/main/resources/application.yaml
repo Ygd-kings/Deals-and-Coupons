@@ -1,0 +1,33 @@
+server:
+  port: 8001
+
+zuul:  
+    routes:     
+        coupon:
+        
+            url: http://localhost:9001
+            
+        admin :
+     
+            url: http://localhost:9000
+        customer:
+     
+            url:  http://localhost:9002  
+            
+        login:
+     
+            url:  http://localhost:9003
+        company:
+        
+            url: http://localhost:9004
+                
+                
+management:  
+    endpoints:  
+       web:      
+         exposure:      
+           include: '*'
+           
+    endpoint: 
+      health:    
+       show-details: ALWAYS
